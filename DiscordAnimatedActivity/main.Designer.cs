@@ -86,8 +86,9 @@
             // startTool
             // 
             this.startTool.Name = "startTool";
-            this.startTool.Size = new System.Drawing.Size(105, 22);
+            this.startTool.Size = new System.Drawing.Size(180, 22);
             this.startTool.Text = "Start";
+            this.startTool.Click += new System.EventHandler(this.startTool_Click);
             // 
             // pauseTool
             // 
@@ -98,8 +99,9 @@
             // stopTool
             // 
             this.stopTool.Name = "stopTool";
-            this.stopTool.Size = new System.Drawing.Size(105, 22);
+            this.stopTool.Size = new System.Drawing.Size(180, 22);
             this.stopTool.Text = "Stop";
+            this.stopTool.Click += new System.EventHandler(this.stopTool_Click);
             // 
             // main
             // 

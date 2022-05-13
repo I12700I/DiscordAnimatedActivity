@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscordAnimatedActivity.Forms;
+using DiscordAnimatedActivity.Models;
 
 namespace DiscordAnimatedActivity
 {
     public partial class main : Form
     {
+        private DiscordClient client = new DiscordClient();  
         public main()
         {
             InitializeComponent();
@@ -33,6 +35,24 @@ namespace DiscordAnimatedActivity
         private void exitTool_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void startTool_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                client.Initialize();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Check your settings!");
+            }
+            client.SetPresence();
+        }
+
+        private void stopTool_Click(object sender, EventArgs e)
+        {
+            client.Deinitialize();
         }
     }
 }
