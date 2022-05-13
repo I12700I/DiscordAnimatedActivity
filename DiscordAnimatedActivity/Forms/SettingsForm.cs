@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
+using DiscordAnimatedActivity.Models;
 
 namespace DiscordAnimatedActivity.Forms
 {
@@ -25,46 +25,34 @@ namespace DiscordAnimatedActivity.Forms
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            try
-            {
-                
-                using (StreamWriter sw = new StreamWriter("settings.txt"))
-                {
-                    sw.WriteLine(ClientId.Text);
-                    sw.WriteLine(TimeSleep.Text);
-                    sw.WriteLine(LargeImages.Value);
-                    sw.WriteLine(SmallImages.Value);
-                    sw.WriteLine(AutoStart.Checked);
-                    sw.WriteLine(AutoRandomImagesCheck.Checked);
-                    sw.WriteLine(GlobalBtnsCheck.Checked);
-                    sw.WriteLine(GlobalBtnFirstUrl.Text);
-                    sw.WriteLine(GlobalBtnFirstText.Text);
-                    sw.WriteLine(GlobalBtnSecondUrl.Text);
-                    sw.WriteLine(GlobalBtnSecondText.Text);
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            Settings.ClientId = ClientId.Text;
+            Settings.TimeSleep = TimeSleep.Text;
+            Settings.LargeImages = LargeImages.Value;
+            Settings.SmallImages = SmallImages.Value;
+            Settings.AutoStart = AutoStart.Checked;
+            Settings.AutoRandomImagesCheck = AutoRandomImagesCheck.Checked;
+            Settings.GlobalBtnsCheck = GlobalBtnsCheck.Checked;
+            Settings.GlobalBtnFirstUrl = GlobalBtnFirstUrl.Text;
+            Settings.GlobalBtnFirstText = GlobalBtnFirstText.Text;
+            Settings.GlobalBtnSecondUrl = GlobalBtnSecondUrl.Text;
+            Settings.GlobalBtnSecondText = GlobalBtnSecondText.Text;
+            Settings.Write("settings.txt");
         }
 
         private void RevertBtn_Click(object sender, EventArgs e)
         {
-            using (StreamReader sw = new StreamReader("settings.txt"))
-            {
-                ClientId.Text = sw.ReadLine();
-                TimeSleep.Text = sw.ReadLine();
-                LargeImages.Value = Convert.ToDecimal(sw.ReadLine());
-                SmallImages.Value = Convert.ToDecimal(sw.ReadLine());
-                AutoStart.Checked = Convert.ToBoolean(sw.ReadLine());
-                AutoRandomImagesCheck.Checked = Convert.ToBoolean(sw.ReadLine());
-                GlobalBtnsCheck.Checked = Convert.ToBoolean(sw.ReadLine());
-                GlobalBtnFirstUrl.Text = sw.ReadLine();
-                GlobalBtnFirstText.Text = sw.ReadLine();
-                GlobalBtnSecondUrl.Text = sw.ReadLine();
-                GlobalBtnSecondText.Text = sw.ReadLine();
-            }
+            Settings.Revert("settings.txt");
+            ClientId.Text = Settings.ClientId;
+            TimeSleep.Text = Settings.TimeSleep;
+            LargeImages.Value = Settings.LargeImages;
+            SmallImages.Value = Settings.SmallImages;
+            AutoStart.Checked = Settings.AutoStart;
+            AutoRandomImagesCheck.Checked = Settings.AutoRandomImagesCheck;
+            GlobalBtnsCheck.Checked = Settings.GlobalBtnsCheck;
+            GlobalBtnFirstUrl.Text = Settings.GlobalBtnFirstUrl;
+            GlobalBtnFirstText.Text = Settings.GlobalBtnFirstText;
+            GlobalBtnSecondUrl.Text = Settings.GlobalBtnSecondUrl;
+            GlobalBtnSecondText.Text = Settings.GlobalBtnSecondText;
         }
     }
 }
