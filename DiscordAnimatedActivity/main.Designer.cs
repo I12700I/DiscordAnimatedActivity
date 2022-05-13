@@ -62,14 +62,14 @@
             // settingsTool
             // 
             this.settingsTool.Name = "settingsTool";
-            this.settingsTool.Size = new System.Drawing.Size(180, 22);
+            this.settingsTool.Size = new System.Drawing.Size(116, 22);
             this.settingsTool.Text = "Settings";
             this.settingsTool.Click += new System.EventHandler(this.settingsTool_Click);
             // 
             // exitTool
             // 
             this.exitTool.Name = "exitTool";
-            this.exitTool.Size = new System.Drawing.Size(180, 22);
+            this.exitTool.Size = new System.Drawing.Size(116, 22);
             this.exitTool.Text = "Exit";
             this.exitTool.Click += new System.EventHandler(this.exitTool_Click);
             // 
@@ -86,7 +86,7 @@
             // startTool
             // 
             this.startTool.Name = "startTool";
-            this.startTool.Size = new System.Drawing.Size(180, 22);
+            this.startTool.Size = new System.Drawing.Size(105, 22);
             this.startTool.Text = "Start";
             this.startTool.Click += new System.EventHandler(this.startTool_Click);
             // 
@@ -99,7 +99,7 @@
             // stopTool
             // 
             this.stopTool.Name = "stopTool";
-            this.stopTool.Size = new System.Drawing.Size(180, 22);
+            this.stopTool.Size = new System.Drawing.Size(105, 22);
             this.stopTool.Text = "Stop";
             this.stopTool.Click += new System.EventHandler(this.stopTool_Click);
             // 
