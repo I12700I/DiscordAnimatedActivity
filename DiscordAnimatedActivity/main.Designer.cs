@@ -71,6 +71,7 @@
             this.exitTool.Name = "exitTool";
             this.exitTool.Size = new System.Drawing.Size(180, 22);
             this.exitTool.Text = "Exit";
+            this.exitTool.Click += new System.EventHandler(this.exitTool_Click);
             // 
             // activityToolStripMenuItem
             // 

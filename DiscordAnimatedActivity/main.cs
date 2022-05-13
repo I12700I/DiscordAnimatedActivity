@@ -29,5 +29,10 @@ namespace DiscordAnimatedActivity
         {
             this.Show();
         }
+
+        private void exitTool_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
