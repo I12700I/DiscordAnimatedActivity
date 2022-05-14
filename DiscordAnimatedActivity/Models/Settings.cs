@@ -52,7 +52,7 @@ namespace DiscordAnimatedActivity.Models
                 using (StreamReader sw = new StreamReader(path))
                 {
                     ClientId = sw.ReadLine();
-                    TimeSleep = sw.ReadLine();
+                    TimeSleep = Convert.ToDecimal(sw.ReadLine());
                     LargeImages = Convert.ToDecimal(sw.ReadLine());
                     SmallImages = Convert.ToDecimal(sw.ReadLine());
                     AutoStart = Convert.ToBoolean(sw.ReadLine());
