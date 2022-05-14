@@ -36,15 +36,11 @@
             this.startTool = new System.Windows.Forms.ToolStripMenuItem();
             this.pauseTool = new System.Windows.Forms.ToolStripMenuItem();
             this.stopTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.FlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.AddActivityBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolTools,
             this.activityToolStripMenuItem});
@@ -107,40 +103,11 @@
             this.stopTool.Text = "Stop";
             this.stopTool.Click += new System.EventHandler(this.stopTool_Click);
             // 
-            // splitter1
-            // 
-            this.splitter1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 24);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(800, 3);
-            this.splitter1.TabIndex = 1;
-            this.splitter1.TabStop = false;
-            // 
-            // FlowLayoutPanel
-            // 
-            this.FlowLayoutPanel.Location = new System.Drawing.Point(0, 69);
-            this.FlowLayoutPanel.Name = "FlowLayoutPanel";
-            this.FlowLayoutPanel.Size = new System.Drawing.Size(800, 383);
-            this.FlowLayoutPanel.TabIndex = 2;
-            // 
-            // AddActivityBtn
-            // 
-            this.AddActivityBtn.Location = new System.Drawing.Point(163, 34);
-            this.AddActivityBtn.Name = "AddActivityBtn";
-            this.AddActivityBtn.Size = new System.Drawing.Size(86, 29);
-            this.AddActivityBtn.TabIndex = 3;
-            this.AddActivityBtn.Text = "Add new";
-            this.AddActivityBtn.UseVisualStyleBackColor = true;
-            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.AddActivityBtn);
-            this.Controls.Add(this.FlowLayoutPanel);
-            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "main";
             this.Text = "Form1";
@@ -161,9 +128,6 @@
         private System.Windows.Forms.ToolStripMenuItem startTool;
         private System.Windows.Forms.ToolStripMenuItem pauseTool;
         private System.Windows.Forms.ToolStripMenuItem stopTool;
-        private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel;
-        private System.Windows.Forms.Button AddActivityBtn;
     }
 }
 

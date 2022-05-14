@@ -14,22 +14,10 @@ namespace DiscordAnimatedActivity
 {
     public partial class main : Form
     {
-        private DiscordClient client = new DiscordClient();
-        private ApplicationContext db = new ApplicationContext();
-        private List<Activity> activities = new List<Activity>();
-        private List<TextBox> TextBoxes = new List<TextBox>();
+        private DiscordClient client = new DiscordClient();  
         public main()
         {
             InitializeComponent();
-            this.Controls.Add(FlowLayoutPanel);
-            activities = db.activities.ToList();
-            TextBox textBox = new TextBox();
-            foreach (Activity activity in activities)
-            {
-                textBox.Text = activity.Details;
-                TextBoxes.Add(textBox);
-                FlowLayoutPanel.Container.Add(textBox);
-            }
         }
 
         private void settingsTool_Click(object sender, EventArgs e)
