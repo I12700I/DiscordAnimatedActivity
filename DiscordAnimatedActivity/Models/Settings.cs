@@ -67,7 +67,7 @@ namespace DiscordAnimatedActivity.Models
             catch (Exception)
             {
                 ClientId = "";
-                TimeSleep = "";
+                TimeSleep = 0;
                 LargeImages = 0;
                 SmallImages = 0;
                 AutoStart = false;
