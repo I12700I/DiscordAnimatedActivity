@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.ClientId = new System.Windows.Forms.TextBox();
-            this.TimeSleep = new System.Windows.Forms.TextBox();
             this.LargeImages = new System.Windows.Forms.NumericUpDown();
             this.SmallImages = new System.Windows.Forms.NumericUpDown();
             this.AutoStart = new System.Windows.Forms.CheckBox();
@@ -50,12 +49,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.RevertBtn = new System.Windows.Forms.Button();
+            this.TimeSleep = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.LargeImages)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SmallImages)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GlobalBtnsContainer)).BeginInit();
             this.GlobalBtnsContainer.Panel1.SuspendLayout();
             this.GlobalBtnsContainer.Panel2.SuspendLayout();
             this.GlobalBtnsContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TimeSleep)).BeginInit();
             this.SuspendLayout();
             // 
             // ClientId
@@ -64,13 +65,6 @@
             this.ClientId.Name = "ClientId";
             this.ClientId.Size = new System.Drawing.Size(186, 20);
             this.ClientId.TabIndex = 0;
-            // 
-            // TimeSleep
-            // 
-            this.TimeSleep.Location = new System.Drawing.Point(118, 38);
-            this.TimeSleep.Name = "TimeSleep";
-            this.TimeSleep.Size = new System.Drawing.Size(186, 20);
-            this.TimeSleep.TabIndex = 0;
             // 
             // LargeImages
             // 
@@ -261,6 +255,13 @@
             this.RevertBtn.UseVisualStyleBackColor = true;
             this.RevertBtn.Click += new System.EventHandler(this.RevertBtn_Click);
             // 
+            // TimeSleep
+            // 
+            this.TimeSleep.Location = new System.Drawing.Point(119, 39);
+            this.TimeSleep.Name = "TimeSleep";
+            this.TimeSleep.Size = new System.Drawing.Size(185, 20);
+            this.TimeSleep.TabIndex = 1;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,8 +278,8 @@
             this.Controls.Add(this.AutoRandomImagesCheck);
             this.Controls.Add(this.AutoStart);
             this.Controls.Add(this.SmallImages);
-            this.Controls.Add(this.LargeImages);
             this.Controls.Add(this.TimeSleep);
+            this.Controls.Add(this.LargeImages);
             this.Controls.Add(this.ClientId);
             this.Name = "SettingsForm";
             this.Text = "SettingsForm";
@@ -291,6 +292,7 @@
             this.GlobalBtnsContainer.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GlobalBtnsContainer)).EndInit();
             this.GlobalBtnsContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TimeSleep)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,7 +301,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox ClientId;
-        private System.Windows.Forms.TextBox TimeSleep;
         private System.Windows.Forms.NumericUpDown LargeImages;
         private System.Windows.Forms.NumericUpDown SmallImages;
         private System.Windows.Forms.CheckBox AutoStart;
@@ -320,5 +321,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.Button RevertBtn;
+        private System.Windows.Forms.NumericUpDown TimeSleep;
     }
 }

@@ -9,7 +9,7 @@ namespace DiscordAnimatedActivity.Models
     static class Settings
     {
         public static string ClientId { get; set; }
-        public static string TimeSleep { get; set; }
+        public static decimal TimeSleep { get; set; }
         public static decimal LargeImages { get; set; }
         public static decimal SmallImages { get; set; }
         public static bool AutoStart { get; set; }

@@ -26,7 +26,7 @@ namespace DiscordAnimatedActivity.Forms
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             Settings.ClientId = ClientId.Text;
-            Settings.TimeSleep = TimeSleep.Text;
+            Settings.TimeSleep = TimeSleep.Value;
             Settings.LargeImages = LargeImages.Value;
             Settings.SmallImages = SmallImages.Value;
             Settings.AutoStart = AutoStart.Checked;
@@ -43,7 +43,7 @@ namespace DiscordAnimatedActivity.Forms
         {
             Settings.Revert("settings.txt");
             ClientId.Text = Settings.ClientId;
-            TimeSleep.Text = Settings.TimeSleep;
+            TimeSleep.Value = Settings.TimeSleep;
             LargeImages.Value = Settings.LargeImages;
             SmallImages.Value = Settings.SmallImages;
             AutoStart.Checked = Settings.AutoStart;
