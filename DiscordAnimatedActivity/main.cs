@@ -15,9 +15,37 @@ namespace DiscordAnimatedActivity
     public partial class main : Form
     {
         private DiscordClient client = new DiscordClient();  
+        private ApplicationContext db = new ApplicationContext();
+        private List<Activity> activities = new List<Activity>();
+        private List<ActivityItem> activityItems = new List<ActivityItem>();
         public main()
         {
             InitializeComponent();
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Button btn = new Button();
+            //    btn.Name = "btn" + i;
+            //    btn.Tag = i;
+            //    btn.Text = i.ToString();
+            //    btn.Font = new Font("Arial", 14f, FontStyle.Bold);
+            //    // btn.UseCompatibleTextRendering = true;
+            //    btn.BackColor = Color.Green;
+            //    btn.Height = 57;
+            //    btn.Width = 116;
+
+
+            //    flowLayoutPanel1.Controls.Add(btn);
+
+            //}
+            activities = db.activities.ToList();
+            foreach (Activity activity in activities)
+            {
+                activityItems.Add(new ActivityItem(activity) { Tag = activity.Id,
+                                                               TopLevel = false, 
+                                                               Visible = true,
+                                                               Width = flowLayoutPanel1.ClientSize.Width-50});
+                flowLayoutPanel1.Controls.Add(activityItems.Last());
+            }
         }
 
         private void settingsTool_Click(object sender, EventArgs e)
