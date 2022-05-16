@@ -21,22 +21,7 @@ namespace DiscordAnimatedActivity
         public main()
         {
             InitializeComponent();
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    Button btn = new Button();
-            //    btn.Name = "btn" + i;
-            //    btn.Tag = i;
-            //    btn.Text = i.ToString();
-            //    btn.Font = new Font("Arial", 14f, FontStyle.Bold);
-            //    // btn.UseCompatibleTextRendering = true;
-            //    btn.BackColor = Color.Green;
-            //    btn.Height = 57;
-            //    btn.Width = 116;
-
-
-            //    flowLayoutPanel1.Controls.Add(btn);
-
-            //}
+            Settings.Revert("settings.txt");
             activities = db.activities.ToList();
             foreach (Activity activity in activities)
             {
@@ -58,6 +43,10 @@ namespace DiscordAnimatedActivity
         void SettingsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
+            foreach (ActivityItem item in activityItems)
+            {
+                item.Revert();
+            }
         }
 
         private void exitTool_Click(object sender, EventArgs e)

@@ -36,6 +36,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.smallkey = new System.Windows.Forms.TextBox();
+            this.largeplaceholder = new System.Windows.Forms.TextBox();
             this.largekey = new System.Windows.Forms.TextBox();
             this.time = new System.Windows.Forms.TextBox();
             this.toolTime = new System.Windows.Forms.ToolTip(this.components);
@@ -44,8 +45,11 @@
             this.revertbtn = new System.Windows.Forms.Button();
             this.details = new System.Windows.Forms.TextBox();
             this.state = new System.Windows.Forms.TextBox();
-            this.largeplaceholder = new System.Windows.Forms.TextBox();
             this.smallplaceholder = new System.Windows.Forms.TextBox();
+            this.btnfirsturl = new System.Windows.Forms.TextBox();
+            this.btnfirsttext = new System.Windows.Forms.TextBox();
+            this.btnsecondurl = new System.Windows.Forms.TextBox();
+            this.btnsecondtext = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,6 +117,13 @@
             this.smallkey.Size = new System.Drawing.Size(100, 20);
             this.smallkey.TabIndex = 6;
             // 
+            // largeplaceholder
+            // 
+            this.largeplaceholder.Location = new System.Drawing.Point(25, 36);
+            this.largeplaceholder.Name = "largeplaceholder";
+            this.largeplaceholder.Size = new System.Drawing.Size(100, 20);
+            this.largeplaceholder.TabIndex = 6;
+            // 
             // largekey
             // 
             this.largekey.Location = new System.Drawing.Point(10, 9);
@@ -146,7 +157,7 @@
             // savebtn
             // 
             this.savebtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.savebtn.Location = new System.Drawing.Point(241, 159);
+            this.savebtn.Location = new System.Drawing.Point(241, 329);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 23);
             this.savebtn.TabIndex = 4;
@@ -157,7 +168,7 @@
             // revertbtn
             // 
             this.revertbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.revertbtn.Location = new System.Drawing.Point(322, 159);
+            this.revertbtn.Location = new System.Drawing.Point(322, 329);
             this.revertbtn.Name = "revertbtn";
             this.revertbtn.Size = new System.Drawing.Size(75, 23);
             this.revertbtn.TabIndex = 5;
@@ -179,13 +190,6 @@
             this.state.Size = new System.Drawing.Size(100, 20);
             this.state.TabIndex = 6;
             // 
-            // largeplaceholder
-            // 
-            this.largeplaceholder.Location = new System.Drawing.Point(25, 36);
-            this.largeplaceholder.Name = "largeplaceholder";
-            this.largeplaceholder.Size = new System.Drawing.Size(100, 20);
-            this.largeplaceholder.TabIndex = 6;
-            // 
             // smallplaceholder
             // 
             this.smallplaceholder.Location = new System.Drawing.Point(55, 162);
@@ -193,12 +197,44 @@
             this.smallplaceholder.Size = new System.Drawing.Size(100, 20);
             this.smallplaceholder.TabIndex = 6;
             // 
+            // btnfirsturl
+            // 
+            this.btnfirsturl.Location = new System.Drawing.Point(13, 205);
+            this.btnfirsturl.Name = "btnfirsturl";
+            this.btnfirsturl.Size = new System.Drawing.Size(171, 20);
+            this.btnfirsturl.TabIndex = 7;
+            // 
+            // btnfirsttext
+            // 
+            this.btnfirsttext.Location = new System.Drawing.Point(190, 205);
+            this.btnfirsttext.Name = "btnfirsttext";
+            this.btnfirsttext.Size = new System.Drawing.Size(173, 20);
+            this.btnfirsttext.TabIndex = 7;
+            // 
+            // btnsecondurl
+            // 
+            this.btnsecondurl.Location = new System.Drawing.Point(13, 251);
+            this.btnsecondurl.Name = "btnsecondurl";
+            this.btnsecondurl.Size = new System.Drawing.Size(171, 20);
+            this.btnsecondurl.TabIndex = 7;
+            // 
+            // btnsecondtext
+            // 
+            this.btnsecondtext.Location = new System.Drawing.Point(190, 251);
+            this.btnsecondtext.Name = "btnsecondtext";
+            this.btnsecondtext.Size = new System.Drawing.Size(173, 20);
+            this.btnsecondtext.TabIndex = 7;
+            // 
             // ActivityItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(409, 194);
+            this.ClientSize = new System.Drawing.Size(409, 364);
+            this.Controls.Add(this.btnsecondtext);
+            this.Controls.Add(this.btnfirsttext);
+            this.Controls.Add(this.btnsecondurl);
+            this.Controls.Add(this.btnfirsturl);
             this.Controls.Add(this.smallplaceholder);
             this.Controls.Add(this.state);
             this.Controls.Add(this.details);
@@ -241,5 +277,9 @@
         private System.Windows.Forms.TextBox state;
         private System.Windows.Forms.TextBox largeplaceholder;
         private System.Windows.Forms.TextBox smallplaceholder;
+        private System.Windows.Forms.TextBox btnfirsturl;
+        private System.Windows.Forms.TextBox btnfirsttext;
+        private System.Windows.Forms.TextBox btnsecondurl;
+        private System.Windows.Forms.TextBox btnsecondtext;
     }
 }
