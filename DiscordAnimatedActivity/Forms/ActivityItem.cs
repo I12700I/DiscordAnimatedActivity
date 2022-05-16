@@ -15,16 +15,19 @@ namespace DiscordAnimatedActivity.Forms
     {
         private string[] timetypes = { "None", "Elapsed", "Left" };
         private string timetype;
-        private string activitytime;
+
+        private Activity activity;
         public ActivityItem(Activity activity)
         {
             InitializeComponent();
+            this.activity = activity;
             details.Text = activity.Details;
             state.Text = activity.State;
             largekey.Text = activity.Largeimagekey;
             smallkey.Text = activity.Smallimagekey;
-            toolLargeKey.SetToolTip(this.largekey, activity.Largeimageplaceholder);
-            toolSmallKey.SetToolTip(this.smallkey, activity.Smallimageplaceholder);
+            largeplaceholder.Text = activity.Largeimageplaceholder;
+            smallplaceholder.Text = activity.Smallimageplaceholder;
+            toolTime.SetToolTip(time, "Enter time in seconds for to use the current time with an offset \nThe default offset is 0");
             if (activity.Starttime != 0)
             {
                 timetypebox.SelectedItem = timetypebox.Items[1];
@@ -63,6 +66,35 @@ namespace DiscordAnimatedActivity.Forms
                     break;
                 default:
                     break;
+            }
+        }
+
+        private void savebtn_Click(object sender, EventArgs e)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                activity.Details = details.Text;
+                activity.State = state.Text;
+                activity.Largeimagekey = largekey.Text;
+                activity.Smallimagekey = smallkey.Text;
+                if (timetype == timetypes[0])
+                {
+                    activity.Starttime = activity.Stoptime = 0;
+                }
+                else if (timetype == timetypes[1])
+                {
+                    activity.Starttime = Convert.ToInt32(time.Text);
+                    activity.Stoptime = 0;
+                }
+                else
+                {
+                    activity.Stoptime = Convert.ToInt32(time.Text);
+                    activity.Starttime = 0;
+                }
+                activity.Largeimageplaceholder = largeplaceholder.Text;
+                activity.Smallimageplaceholder = smallplaceholder.Text;
+                db.Entry(activity).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
             }
         }
     }
