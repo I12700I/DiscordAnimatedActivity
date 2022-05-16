@@ -50,6 +50,9 @@
             this.btnfirsttext = new System.Windows.Forms.TextBox();
             this.btnsecondurl = new System.Windows.Forms.TextBox();
             this.btnsecondtext = new System.Windows.Forms.TextBox();
+            this.randomlarge = new System.Windows.Forms.CheckBox();
+            this.randomsmall = new System.Windows.Forms.CheckBox();
+            this.globalbtns = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,7 +136,7 @@
             // 
             // time
             // 
-            this.time.Location = new System.Drawing.Point(147, 122);
+            this.time.Location = new System.Drawing.Point(150, 122);
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(100, 20);
             this.time.TabIndex = 3;
@@ -148,7 +151,7 @@
             "don\'t use the time",
             "elapsed",
             "left"});
-            this.timetypebox.Location = new System.Drawing.Point(253, 122);
+            this.timetypebox.Location = new System.Drawing.Point(256, 122);
             this.timetypebox.Name = "timetypebox";
             this.timetypebox.Size = new System.Drawing.Size(110, 21);
             this.timetypebox.TabIndex = 2;
@@ -225,12 +228,48 @@
             this.btnsecondtext.Size = new System.Drawing.Size(173, 20);
             this.btnsecondtext.TabIndex = 7;
             // 
+            // randomlarge
+            // 
+            this.randomlarge.AutoSize = true;
+            this.randomlarge.Location = new System.Drawing.Point(12, 278);
+            this.randomlarge.Name = "randomlarge";
+            this.randomlarge.Size = new System.Drawing.Size(92, 17);
+            this.randomlarge.TabIndex = 8;
+            this.randomlarge.Text = "Random large";
+            this.randomlarge.UseVisualStyleBackColor = true;
+            this.randomlarge.CheckedChanged += new System.EventHandler(this.randoms_CheckedChanged);
+            // 
+            // randomsmall
+            // 
+            this.randomsmall.AutoSize = true;
+            this.randomsmall.Location = new System.Drawing.Point(110, 278);
+            this.randomsmall.Name = "randomsmall";
+            this.randomsmall.Size = new System.Drawing.Size(92, 17);
+            this.randomsmall.TabIndex = 8;
+            this.randomsmall.Text = "Random small";
+            this.randomsmall.UseVisualStyleBackColor = true;
+            this.randomsmall.CheckedChanged += new System.EventHandler(this.randoms_CheckedChanged);
+            // 
+            // globalbtns
+            // 
+            this.globalbtns.AutoSize = true;
+            this.globalbtns.Location = new System.Drawing.Point(208, 278);
+            this.globalbtns.Name = "globalbtns";
+            this.globalbtns.Size = new System.Drawing.Size(94, 17);
+            this.globalbtns.TabIndex = 8;
+            this.globalbtns.Text = "Global buttons";
+            this.globalbtns.UseVisualStyleBackColor = true;
+            this.globalbtns.CheckedChanged += new System.EventHandler(this.globalbtns_CheckedChanged);
+            // 
             // ActivityItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(409, 364);
+            this.Controls.Add(this.globalbtns);
+            this.Controls.Add(this.randomsmall);
+            this.Controls.Add(this.randomlarge);
             this.Controls.Add(this.btnsecondtext);
             this.Controls.Add(this.btnfirsttext);
             this.Controls.Add(this.btnsecondurl);
@@ -281,5 +320,8 @@
         private System.Windows.Forms.TextBox btnfirsttext;
         private System.Windows.Forms.TextBox btnsecondurl;
         private System.Windows.Forms.TextBox btnsecondtext;
+        private System.Windows.Forms.CheckBox randomlarge;
+        private System.Windows.Forms.CheckBox randomsmall;
+        private System.Windows.Forms.CheckBox globalbtns;
     }
 }
