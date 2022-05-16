@@ -21,31 +21,7 @@ namespace DiscordAnimatedActivity.Forms
         {
             InitializeComponent();
             this.activity = activity;
-            details.Text = activity.Details;
-            state.Text = activity.State;
-            largekey.Text = activity.Largeimagekey;
-            smallkey.Text = activity.Smallimagekey;
-            largeplaceholder.Text = activity.Largeimageplaceholder;
-            smallplaceholder.Text = activity.Smallimageplaceholder;
             toolTime.SetToolTip(time, "Enter time in seconds for to use the current time with an offset \nThe default offset is 0");
-            if (activity.Starttime != 0)
-            {
-                timetypebox.SelectedItem = timetypebox.Items[1];
-                timetype = timetypes[1];
-                time.Text = Convert.ToString(activity.Starttime);
-            }
-            else if (activity.Stoptime != 0)
-            {
-                timetypebox.SelectedItem = timetypebox.Items[2];
-                timetype = timetypes[2];
-                time.Text = Convert.ToString(activity.Stoptime);
-            }
-            else 
-            { 
-                timetypebox.SelectedItem = timetypebox.Items[0];
-                timetype = timetypes[0];
-                time.Enabled = false;
-            }
         }
 
         private void timetype_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,6 +71,34 @@ namespace DiscordAnimatedActivity.Forms
                 activity.Smallimageplaceholder = smallplaceholder.Text;
                 db.Entry(activity).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
+            }
+        }
+
+        private void revertbtn_Click(object sender, EventArgs e)
+        {
+            details.Text = activity.Details;
+            state.Text = activity.State;
+            largekey.Text = activity.Largeimagekey;
+            smallkey.Text = activity.Smallimagekey;
+            largeplaceholder.Text = activity.Largeimageplaceholder;
+            smallplaceholder.Text = activity.Smallimageplaceholder;
+            if (activity.Starttime != 0)
+            {
+                timetypebox.SelectedItem = timetypebox.Items[1];
+                timetype = timetypes[1];
+                time.Text = Convert.ToString(activity.Starttime);
+            }
+            else if (activity.Stoptime != 0)
+            {
+                timetypebox.SelectedItem = timetypebox.Items[2];
+                timetype = timetypes[2];
+                time.Text = Convert.ToString(activity.Stoptime);
+            }
+            else
+            {
+                timetypebox.SelectedItem = timetypebox.Items[0];
+                timetype = timetypes[0];
+                time.Enabled = false;
             }
         }
     }

@@ -163,6 +163,7 @@
             this.revertbtn.TabIndex = 5;
             this.revertbtn.Text = "Revert";
             this.revertbtn.UseVisualStyleBackColor = true;
+            this.revertbtn.Click += new System.EventHandler(this.revertbtn_Click);
             // 
             // details
             // 
@@ -212,6 +213,7 @@
             this.MinimizeBox = false;
             this.Name = "ActivityItem";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.revertbtn_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
