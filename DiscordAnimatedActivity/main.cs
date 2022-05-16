@@ -43,7 +43,7 @@ namespace DiscordAnimatedActivity
                 activityItems.Add(new ActivityItem(activity) { Tag = activity.Id,
                                                                TopLevel = false, 
                                                                Visible = true,
-                                                               Width = flowLayoutPanel1.ClientSize.Width-50});
+                                                               Width = flowLayoutPanel1.ClientSize.Width - 25 });
                 flowLayoutPanel1.Controls.Add(activityItems.Last());
             }
         }
@@ -81,6 +81,14 @@ namespace DiscordAnimatedActivity
         private void stopTool_Click(object sender, EventArgs e)
         {
             client.Deinitialize();
+        }
+
+        private void main_SizeChanged(object sender, EventArgs e)
+        {
+            foreach (ActivityItem item in activityItems)
+            {
+                item.Width = flowLayoutPanel1.ClientSize.Width - 8;
+            }
         }
     }
 }

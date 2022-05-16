@@ -132,6 +132,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Design\Fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Design\Images\c09a43a372ba81e3018c3151d4ed4773.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
