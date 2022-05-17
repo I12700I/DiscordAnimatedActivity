@@ -104,6 +104,83 @@ namespace DiscordAnimatedActivity.Models
 				});
 			}
 		}
+		public void SetPresence(Activity activity,
+								bool FirstButtonEnabled = false,
+								bool SecondButtonEnabled = false,
+								string BtnFirstUrl = null,
+								string BtnFirstText = null,
+								string BtnSecondUrl = null,
+								string BtnSecondText = null)
+		{
+			if (FirstButtonEnabled)
+			{
+				Button[] UserButtons;
+				BtnFirst.Url = BtnFirstUrl;
+				BtnFirst.Label = BtnFirstText;
+				if (SecondButtonEnabled)
+				{
+					BtnSecond.Url = BtnSecondUrl;
+					BtnSecond.Label = BtnSecondText;
+					UserButtons = new Button[]
+					{
+						BtnFirst,
+						BtnSecond
+					};
+				}
+				else
+				{
+					UserButtons = new Button[]
+					{
+						BtnFirst
+					};
+				}
+				try
+				{
+					client.SetPresence(new RichPresence()
+					{
+						Details = activity.Details,
+						State = activity.State,
+						Assets = new Assets()
+						{
+							LargeImageKey = activity.Largeimagekey,
+							SmallImageKey = activity.Smallimagekey,
+							LargeImageText = activity.Largeimageplaceholder,
+							SmallImageText = activity.Smallimageplaceholder,
+						},
+						Timestamps = new Timestamps()
+						{
+							Start = Convert.ToDateTime(Convert.ToInt32(DateTime.UtcNow) - activity.Starttime),
+							End = Convert.ToDateTime(Convert.ToInt32(DateTime.UtcNow) + activity.Stoptime),
+						},
+						Buttons = UserButtons,
+					});
+				}
+				catch (Exception)
+				{
+					throw;
+				}
+			}
+			else
+			{
+				client.SetPresence(new RichPresence()
+				{
+					Details = activity.Details,
+					State = activity.State,
+					Assets = new Assets()
+					{
+						LargeImageKey = activity.Largeimagekey,
+						SmallImageKey = activity.Smallimagekey,
+						LargeImageText = activity.Largeimageplaceholder,
+						SmallImageText = activity.Smallimageplaceholder,
+					},
+					Timestamps = new Timestamps()
+					{
+						Start = Convert.ToDateTime(Convert.ToInt32(DateTime.UtcNow) - activity.Starttime),
+						End = Convert.ToDateTime(Convert.ToInt32(DateTime.UtcNow) + activity.Stoptime),
+					},
+				});
+			}
+		}
 		public void Deinitialize()
 		{
 			client.Dispose();
