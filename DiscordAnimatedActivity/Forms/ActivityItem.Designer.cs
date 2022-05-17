@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActivityItem));
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.smallkey = new System.Windows.Forms.TextBox();
             this.largeplaceholder = new System.Windows.Forms.TextBox();
@@ -53,6 +50,7 @@
             this.randomlarge = new System.Windows.Forms.CheckBox();
             this.randomsmall = new System.Windows.Forms.CheckBox();
             this.globalbtns = new System.Windows.Forms.CheckBox();
+            this.deletebtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,39 +65,6 @@
             this.label1.Size = new System.Drawing.Size(146, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "PLAYING A GAME";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Whitney Light", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(202, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 22);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "State";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Whitney Light", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(47, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 22);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "LargeKey";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Whitney Light", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(117, 200);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 22);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "SmallKey";
             // 
             // panel1
             // 
@@ -160,7 +125,7 @@
             // savebtn
             // 
             this.savebtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.savebtn.Location = new System.Drawing.Point(241, 329);
+            this.savebtn.Location = new System.Drawing.Point(160, 329);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 23);
             this.savebtn.TabIndex = 4;
@@ -171,7 +136,7 @@
             // revertbtn
             // 
             this.revertbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.revertbtn.Location = new System.Drawing.Point(322, 329);
+            this.revertbtn.Location = new System.Drawing.Point(241, 329);
             this.revertbtn.Name = "revertbtn";
             this.revertbtn.Size = new System.Drawing.Size(75, 23);
             this.revertbtn.TabIndex = 5;
@@ -261,6 +226,17 @@
             this.globalbtns.UseVisualStyleBackColor = true;
             this.globalbtns.CheckedChanged += new System.EventHandler(this.globalbtns_CheckedChanged);
             // 
+            // deletebtn
+            // 
+            this.deletebtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.deletebtn.Location = new System.Drawing.Point(322, 329);
+            this.deletebtn.Name = "deletebtn";
+            this.deletebtn.Size = new System.Drawing.Size(75, 23);
+            this.deletebtn.TabIndex = 5;
+            this.deletebtn.Text = "Delete";
+            this.deletebtn.UseVisualStyleBackColor = true;
+            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
+            // 
             // ActivityItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,6 +253,7 @@
             this.Controls.Add(this.smallplaceholder);
             this.Controls.Add(this.state);
             this.Controls.Add(this.details);
+            this.Controls.Add(this.deletebtn);
             this.Controls.Add(this.revertbtn);
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.time);
@@ -299,11 +276,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox largeplace;
-        private System.Windows.Forms.TextBox smallplace;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox time;
         private System.Windows.Forms.ToolTip toolTime;
@@ -323,5 +295,6 @@
         private System.Windows.Forms.CheckBox randomlarge;
         private System.Windows.Forms.CheckBox randomsmall;
         private System.Windows.Forms.CheckBox globalbtns;
+        private System.Windows.Forms.Button deletebtn;
     }
 }

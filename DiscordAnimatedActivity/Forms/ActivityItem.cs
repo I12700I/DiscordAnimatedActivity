@@ -161,5 +161,16 @@ namespace DiscordAnimatedActivity.Forms
         {
             SetImages();
         }
+
+        private void deletebtn_Click(object sender, EventArgs e)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                db.activities.Attach(activity);
+                db.activities.Remove(activity);
+                db.SaveChanges();
+                this.Close();
+            }
+        }
     }
 }
