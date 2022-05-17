@@ -112,6 +112,17 @@ namespace DiscordAnimatedActivity.Models
 								string BtnSecondUrl = null,
 								string BtnSecondText = null)
 		{
+			Timestamps Time;
+			if (activity.Starttime != 0)
+			{
+				Time = new Timestamps() { Start = DateTime.UtcNow.AddSeconds(-activity.Starttime) };
+			}
+			else if (activity.Stoptime != 0)
+			{
+				Time = new Timestamps() { End = DateTime.UtcNow.AddSeconds(activity.Stoptime) };
+
+			}
+			else Time = default(Timestamps);
 			if (FirstButtonEnabled)
 			{
 				Button[] UserButtons;
@@ -147,11 +158,7 @@ namespace DiscordAnimatedActivity.Models
 							LargeImageText = activity.Largeimageplaceholder,
 							SmallImageText = activity.Smallimageplaceholder,
 						},
-						Timestamps = new Timestamps()
-						{
-							Start = Convert.ToDateTime(Convert.ToInt32(DateTime.UtcNow) - activity.Starttime),
-							End = Convert.ToDateTime(Convert.ToInt32(DateTime.UtcNow) + activity.Stoptime),
-						},
+						Timestamps = Time,
 						Buttons = UserButtons,
 					});
 				}
@@ -173,12 +180,8 @@ namespace DiscordAnimatedActivity.Models
 						LargeImageText = activity.Largeimageplaceholder,
 						SmallImageText = activity.Smallimageplaceholder,
 					},
-					Timestamps = new Timestamps()
-					{
-						Start = Convert.ToDateTime(Convert.ToInt32(DateTime.UtcNow) - activity.Starttime),
-						End = Convert.ToDateTime(Convert.ToInt32(DateTime.UtcNow) + activity.Stoptime),
-					},
-				});
+                    Timestamps = Time,
+                });
 			}
 		}
 		public void Deinitialize()

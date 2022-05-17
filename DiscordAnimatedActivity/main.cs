@@ -64,7 +64,45 @@ namespace DiscordAnimatedActivity
             {
                 MessageBox.Show("Check your settings!");
             }
-            client.SetPresence();
+            Random random = new Random();
+            string btnfirsturl;
+            string btnfirsttext;
+            string btnsecondurl;
+            string btnsecondtext;
+            bool firstbtn = false;
+            bool secondbtn = false;
+            Activity activity = activities[random.Next(0, activities.Count)];
+            if (activity.Isglobalbtns)
+            {
+                btnfirsturl = Settings.GlobalBtnFirstUrl;
+                btnfirsttext = Settings.GlobalBtnFirstText;
+                btnsecondurl = Settings.GlobalBtnSecondUrl;
+                btnsecondtext = Settings.GlobalBtnSecondText;
+                if (btnfirsturl != "" && btnfirsttext != "")
+                {
+                    firstbtn = true;
+                    if (btnsecondurl != "" && btnsecondtext != "")
+                    {
+                        secondbtn = true;
+                    }
+                }
+            }
+            else
+            {
+                btnfirsturl = activity.Btnfirsturl;
+                btnfirsttext = activity.Btnfirsttext;
+                btnsecondurl = activity.Btnsecondurl;
+                btnsecondtext = activity.Btnsecondtext;
+                if (btnfirsturl != "" && btnfirsttext != "")
+                {
+                    firstbtn = true;
+                    if (btnsecondurl != "" && btnsecondtext != "")
+                    {
+                        secondbtn = true;
+                    }
+                }
+            }
+            client.SetPresence(activity, firstbtn, secondbtn, btnfirsturl, btnfirsttext, btnsecondurl, btnsecondtext);
         }
 
         private void stopTool_Click(object sender, EventArgs e)
