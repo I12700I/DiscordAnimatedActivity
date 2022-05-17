@@ -25,7 +25,7 @@ namespace DiscordAnimatedActivity
             activities = db.activities.ToList();
             foreach (Activity activity in activities)
             {
-                activityItems.Add(new ActivityItem(activity) { Tag = activity.Id,
+                activityItems.Add(new ActivityItem(activity) { Tag = activity.id,
                                                                TopLevel = false, 
                                                                Visible = true,
                                                                Width = flowLayoutPanel1.ClientSize.Width - 25 });
@@ -116,6 +116,22 @@ namespace DiscordAnimatedActivity
             {
                 item.Width = flowLayoutPanel1.ClientSize.Width - 8;
             }
+        }
+
+        private void addActivity_Click(object sender, EventArgs e)
+        {
+            Activity item = new Activity();
+            db.activities.Add(item);
+            db.SaveChanges();
+            activities.Add(item);
+            activityItems.Add(new ActivityItem(item)
+            {
+                Tag = item.id,
+                TopLevel = false,
+                Visible = true,
+                Width = flowLayoutPanel1.ClientSize.Width - 25
+            });
+            flowLayoutPanel1.Controls.Add(activityItems.Last());
         }
     }
 }

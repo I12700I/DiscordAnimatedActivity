@@ -8,7 +8,7 @@ namespace DiscordAnimatedActivity.Models
 {
     public class Activity
     {
-        public int Id { get; set; }
+        public int id { get; set; }
         public string Details { get; set; }
         public string State { get; set; }
         public string Largeimagekey { get; set; }
@@ -26,8 +26,7 @@ namespace DiscordAnimatedActivity.Models
         public bool Isglobalbtns { get; set; }
 
         public Activity() { }
-        public Activity(int Id,
-                        string Details,
+        public Activity(string Details,
                         string State,
                         string Largeimagekey,
                         string Largeimageplaceholder,
@@ -43,7 +42,6 @@ namespace DiscordAnimatedActivity.Models
                         bool Israndomsmallimages,
                         bool Isglobalbtns)
         {
-            this.Id = Id;
             this.Details = Details;
             this.State = State;
             this.Largeimagekey = Largeimagekey;

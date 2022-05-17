@@ -36,7 +36,7 @@
             this.startTool = new System.Windows.Forms.ToolStripMenuItem();
             this.pauseTool = new System.Windows.Forms.ToolStripMenuItem();
             this.stopTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addActivity = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
@@ -107,14 +107,15 @@
             this.stopTool.Text = "Stop";
             this.stopTool.Click += new System.EventHandler(this.stopTool_Click);
             // 
-            // button1
+            // addActivity
             // 
-            this.button1.Location = new System.Drawing.Point(163, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add new activity";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addActivity.Location = new System.Drawing.Point(163, 33);
+            this.addActivity.Name = "addActivity";
+            this.addActivity.Size = new System.Drawing.Size(97, 23);
+            this.addActivity.TabIndex = 1;
+            this.addActivity.Text = "Add new activity";
+            this.addActivity.UseVisualStyleBackColor = true;
+            this.addActivity.Click += new System.EventHandler(this.addActivity_Click);
             // 
             // splitter1
             // 
@@ -145,7 +146,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.splitter1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addActivity);
             this.Controls.Add(this.menuStrip1);
             this.MinimumSize = new System.Drawing.Size(450, 200);
             this.Name = "main";
@@ -168,7 +169,7 @@
         private System.Windows.Forms.ToolStripMenuItem startTool;
         private System.Windows.Forms.ToolStripMenuItem pauseTool;
         private System.Windows.Forms.ToolStripMenuItem stopTool;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addActivity;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
