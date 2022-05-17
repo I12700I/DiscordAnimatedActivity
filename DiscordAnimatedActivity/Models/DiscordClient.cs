@@ -120,7 +120,6 @@ namespace DiscordAnimatedActivity.Models
 			else if (activity.Stoptime != 0)
 			{
 				Time = new Timestamps() { End = DateTime.UtcNow.AddSeconds(activity.Stoptime) };
-
 			}
 			else Time = default(Timestamps);
 			if (FirstButtonEnabled)
@@ -180,8 +179,8 @@ namespace DiscordAnimatedActivity.Models
 						LargeImageText = activity.Largeimageplaceholder,
 						SmallImageText = activity.Smallimageplaceholder,
 					},
-                    Timestamps = Time,
-                });
+					Timestamps = Time,
+				});
 			}
 		}
 		public void Deinitialize()

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscordAnimatedActivity.Forms;
 using DiscordAnimatedActivity.Models;
+using System.Threading;
 
 namespace DiscordAnimatedActivity
 {
@@ -18,6 +19,8 @@ namespace DiscordAnimatedActivity
         private ApplicationContext db = new ApplicationContext();
         private List<Activity> activities = new List<Activity>();
         private List<ActivityItem> activityItems = new List<ActivityItem>();
+        private Thread thread;
+        private bool showActivity = false;
         public main()
         {
             InitializeComponent();
@@ -64,49 +67,62 @@ namespace DiscordAnimatedActivity
             {
                 MessageBox.Show("Check your settings!");
             }
+            showActivity = true;
+            thread = new Thread(new ThreadStart(RandomActivity));
+            thread.Start();
+        }
+        private async void RandomActivity()
+        {
             Random random = new Random();
             string btnfirsturl;
             string btnfirsttext;
             string btnsecondurl;
             string btnsecondtext;
-            bool firstbtn = false;
-            bool secondbtn = false;
-            Activity activity = activities[random.Next(0, activities.Count)];
-            if (activity.Isglobalbtns)
+            bool firstbtn;
+            bool secondbtn;
+            while (showActivity)
             {
-                btnfirsturl = Settings.GlobalBtnFirstUrl;
-                btnfirsttext = Settings.GlobalBtnFirstText;
-                btnsecondurl = Settings.GlobalBtnSecondUrl;
-                btnsecondtext = Settings.GlobalBtnSecondText;
-                if (btnfirsturl != "" && btnfirsttext != "")
+                firstbtn = false;
+                secondbtn = false;
+                Activity activity = activities[random.Next(0, activities.Count)];
+                if (activity.Isglobalbtns)
                 {
-                    firstbtn = true;
-                    if (btnsecondurl != "" && btnsecondtext != "")
+                    btnfirsturl = Settings.GlobalBtnFirstUrl;
+                    btnfirsttext = Settings.GlobalBtnFirstText;
+                    btnsecondurl = Settings.GlobalBtnSecondUrl;
+                    btnsecondtext = Settings.GlobalBtnSecondText;
+                    if (btnfirsturl != "" && btnfirsttext != "")
                     {
-                        secondbtn = true;
+                        firstbtn = true;
+                        if (btnsecondurl != "" && btnsecondtext != "")
+                        {
+                            secondbtn = true;
+                        }
                     }
                 }
-            }
-            else
-            {
-                btnfirsturl = activity.Btnfirsturl;
-                btnfirsttext = activity.Btnfirsttext;
-                btnsecondurl = activity.Btnsecondurl;
-                btnsecondtext = activity.Btnsecondtext;
-                if (btnfirsturl != "" && btnfirsttext != "")
+                else
                 {
-                    firstbtn = true;
-                    if (btnsecondurl != "" && btnsecondtext != "")
+                    btnfirsturl = activity.Btnfirsturl;
+                    btnfirsttext = activity.Btnfirsttext;
+                    btnsecondurl = activity.Btnsecondurl;
+                    btnsecondtext = activity.Btnsecondtext;
+                    if (btnfirsturl != "" && btnfirsttext != "")
                     {
-                        secondbtn = true;
+                        firstbtn = true;
+                        if (btnsecondurl != "" && btnsecondtext != "")
+                        {
+                            secondbtn = true;
+                        }
                     }
                 }
+                client.SetPresence(activity, firstbtn, secondbtn, btnfirsturl, btnfirsttext, btnsecondurl, btnsecondtext);
+                await Task.Delay((int)Settings.TimeSleep * 1000);
             }
-            client.SetPresence(activity, firstbtn, secondbtn, btnfirsturl, btnfirsttext, btnsecondurl, btnsecondtext);
         }
-
         private void stopTool_Click(object sender, EventArgs e)
         {
+            showActivity = false;
+            thread.Join();
             client.Deinitialize();
         }
 

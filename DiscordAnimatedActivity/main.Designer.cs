@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolTools = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsTool = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,6 +40,7 @@
             this.addActivity = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -172,6 +174,7 @@
         private System.Windows.Forms.Button addActivity;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
