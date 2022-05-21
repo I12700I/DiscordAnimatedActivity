@@ -284,7 +284,7 @@
             this.Controls.Add(this.ClientId);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SettingsForm";
-            this.Text = "SettingsForm";
+            this.Text = "Settings";
             this.Load += new System.EventHandler(this.RevertBtn_Click);
             ((System.ComponentModel.ISupportInitialize)(this.LargeImages)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SmallImages)).EndInit();
