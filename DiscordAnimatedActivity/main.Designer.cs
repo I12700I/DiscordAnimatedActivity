@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolTools = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsTool = new System.Windows.Forms.ToolStripMenuItem();
@@ -150,9 +151,10 @@
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.addActivity);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(450, 200);
             this.Name = "main";
-            this.Text = "Form1";
+            this.Text = "Discord animated activity";
             this.SizeChanged += new System.EventHandler(this.main_SizeChanged);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

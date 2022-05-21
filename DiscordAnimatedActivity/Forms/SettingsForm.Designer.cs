@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.ClientId = new System.Windows.Forms.TextBox();
             this.LargeImages = new System.Windows.Forms.NumericUpDown();
             this.SmallImages = new System.Windows.Forms.NumericUpDown();
@@ -281,6 +282,7 @@
             this.Controls.Add(this.TimeSleep);
             this.Controls.Add(this.LargeImages);
             this.Controls.Add(this.ClientId);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SettingsForm";
             this.Text = "SettingsForm";
             this.Load += new System.EventHandler(this.RevertBtn_Click);
