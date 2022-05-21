@@ -17,7 +17,6 @@ namespace DiscordAnimatedActivity
     {
         private DiscordClient client = new DiscordClient();  
         private ApplicationContext db = new ApplicationContext();
-        private List<Activity> activities = new List<Activity>();
         private List<ActivityItem> activityItems = new List<ActivityItem>();
         private Thread thread;
         private bool showActivity = false;
@@ -25,8 +24,7 @@ namespace DiscordAnimatedActivity
         {
             InitializeComponent();
             Settings.Revert("settings.txt");
-            activities = db.activities.ToList();
-            foreach (Activity activity in activities)
+            foreach (Activity activity in db.activities.ToList())
             {
                 activityItems.Add(new ActivityItem(activity) { Tag = activity.id,
                                                                TopLevel = false, 
@@ -84,7 +82,7 @@ namespace DiscordAnimatedActivity
             {
                 firstbtn = false;
                 secondbtn = false;
-                Activity activity = activities[random.Next(0, activities.Count)];
+                Activity activity = db.activities.ToList()[random.Next(0, db.activities.Count())];
                 if (activity.Isglobalbtns)
                 {
                     btnfirsturl = Settings.GlobalBtnFirstUrl;
@@ -139,7 +137,6 @@ namespace DiscordAnimatedActivity
             Activity item = new Activity();
             db.activities.Add(item);
             db.SaveChanges();
-            activities.Add(item);
             activityItems.Add(new ActivityItem(item)
             {
                 Tag = item.id,
