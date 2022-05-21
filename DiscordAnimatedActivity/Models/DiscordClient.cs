@@ -105,6 +105,7 @@ namespace DiscordAnimatedActivity.Models
 			}
 		}
 		public void SetPresence(Activity activity,
+								DateTime globaltime,
 								bool FirstButtonEnabled = false,
 								bool SecondButtonEnabled = false,
 								string BtnFirstUrl = null,
@@ -115,11 +116,20 @@ namespace DiscordAnimatedActivity.Models
 			Timestamps Time;
 			if (activity.Starttime != 0)
 			{
-				Time = new Timestamps() { Start = DateTime.UtcNow.AddSeconds(-activity.Starttime) };
+				if (activity.Isglobaltime)
+				{
+					Time = new Timestamps() { Start = globaltime };
+				}
+				else
+				{
+					Time = new Timestamps() { Start = DateTime.UtcNow.AddSeconds(-activity.Starttime) };
+				}
 			}
 			else if (activity.Stoptime != 0)
 			{
-				Time = new Timestamps() { End = DateTime.UtcNow.AddSeconds(activity.Stoptime) };
+				{
+					Time = new Timestamps() { End = DateTime.UtcNow.AddSeconds(activity.Stoptime) };
+				}
 			}
 			else Time = default(Timestamps);
 			if (FirstButtonEnabled)

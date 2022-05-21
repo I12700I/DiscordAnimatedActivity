@@ -62,6 +62,7 @@ namespace DiscordAnimatedActivity.Forms
                     {
                         activity.Starttime = Convert.ToInt32(time.Text);
                         activity.Stoptime = 0;
+                        if (globaltime.Checked) activity.Starttime++;
                     }
                     else
                     {
@@ -72,6 +73,7 @@ namespace DiscordAnimatedActivity.Forms
                     activity.Smallimageplaceholder = smallplaceholder.Text;
                     activity.Israndomlargeimages = randomlarge.Checked;
                     activity.Israndomsmallimages = randomsmall.Checked;
+                    activity.Isglobaltime = globaltime.Checked;
                     activity.Isglobalbtns = globalbtns.Checked;
                     activity.Btnfirsturl = btnfirsturl.Text;
                     activity.Btnfirsttext = btnfirsttext.Text;
@@ -91,6 +93,7 @@ namespace DiscordAnimatedActivity.Forms
             randomlarge.Checked = activity.Israndomlargeimages;
             randomsmall.Checked = activity.Israndomsmallimages;
             globalbtns.Checked = activity.Isglobalbtns;
+            globaltime.Checked = activity.Isglobaltime;
             SetBtns();
             SetImages();
             details.Text = activity.Details;

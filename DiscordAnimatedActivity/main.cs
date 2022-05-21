@@ -78,6 +78,7 @@ namespace DiscordAnimatedActivity
             string btnsecondtext;
             bool firstbtn;
             bool secondbtn;
+            DateTime globaltime = DateTime.UtcNow;
             while (showActivity)
             {
                 firstbtn = false;
@@ -113,7 +114,7 @@ namespace DiscordAnimatedActivity
                         }
                     }
                 }
-                client.SetPresence(activity, firstbtn, secondbtn, btnfirsturl, btnfirsttext, btnsecondurl, btnsecondtext);
+                client.SetPresence(activity, globaltime, firstbtn, secondbtn, btnfirsturl, btnfirsttext, btnsecondurl, btnsecondtext);
                 await Task.Delay((int)Settings.TimeSleep * 1000);
             }
         }

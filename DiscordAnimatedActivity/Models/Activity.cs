@@ -24,7 +24,7 @@ namespace DiscordAnimatedActivity.Models
         public bool Israndomlargeimages { get; set; }
         public bool Israndomsmallimages { get; set; }
         public bool Isglobalbtns { get; set; }
-
+        public bool Isglobaltime { get; set; }
         public Activity() { }
         public Activity(string Details,
                         string State,
@@ -40,7 +40,8 @@ namespace DiscordAnimatedActivity.Models
                         string Btnsecondtext,
                         bool Israndomlargeimages,
                         bool Israndomsmallimages,
-                        bool Isglobalbtns)
+                        bool Isglobalbtns,
+                        bool Isglobaltime)
         {
             this.Details = Details;
             this.State = State;
@@ -57,6 +58,7 @@ namespace DiscordAnimatedActivity.Models
             this.Israndomlargeimages = Israndomlargeimages;
             this.Israndomsmallimages = Israndomsmallimages;
             this.Isglobalbtns = Isglobalbtns;
+            this.Isglobaltime = Isglobaltime;
         }
     }
 }

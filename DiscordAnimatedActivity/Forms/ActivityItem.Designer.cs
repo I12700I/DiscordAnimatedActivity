@@ -51,6 +51,7 @@
             this.randomsmall = new System.Windows.Forms.CheckBox();
             this.globalbtns = new System.Windows.Forms.CheckBox();
             this.deletebtn = new System.Windows.Forms.Button();
+            this.globaltime = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,6 +106,7 @@
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(100, 20);
             this.time.TabIndex = 3;
+            this.time.Text = "0";
             this.toolTime.SetToolTip(this.time, "Enter time in seconds for to use the current time with an offset \r\nThe default of" +
         "fset is 0");
             // 
@@ -237,12 +239,24 @@
             this.deletebtn.UseVisualStyleBackColor = true;
             this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
             // 
+            // globaltime
+            // 
+            this.globaltime.AutoSize = true;
+            this.globaltime.Location = new System.Drawing.Point(308, 277);
+            this.globaltime.Name = "globaltime";
+            this.globaltime.Size = new System.Drawing.Size(78, 17);
+            this.globaltime.TabIndex = 8;
+            this.globaltime.Text = "Global time";
+            this.globaltime.UseVisualStyleBackColor = true;
+            this.globaltime.CheckedChanged += new System.EventHandler(this.globalbtns_CheckedChanged);
+            // 
             // ActivityItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(409, 364);
+            this.Controls.Add(this.globaltime);
             this.Controls.Add(this.globalbtns);
             this.Controls.Add(this.randomsmall);
             this.Controls.Add(this.randomlarge);
@@ -296,5 +310,6 @@
         private System.Windows.Forms.CheckBox randomsmall;
         private System.Windows.Forms.CheckBox globalbtns;
         private System.Windows.Forms.Button deletebtn;
+        private System.Windows.Forms.CheckBox globaltime;
     }
 }
