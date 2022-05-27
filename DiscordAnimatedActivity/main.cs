@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscordAnimatedActivity.Forms;
 using DiscordAnimatedActivity.Models;
 using System.Threading;
+using MaterialSkin.Controls;
+using MaterialSkin;
 
 namespace DiscordAnimatedActivity
 {
-    public partial class Main : Form
+    public partial class Main : MaterialForm
     {
         private readonly DiscordClient client = new DiscordClient();  
         private readonly ApplicationContext db = new ApplicationContext();
@@ -26,7 +24,7 @@ namespace DiscordAnimatedActivity
             Settings.Revert("settings.txt");
             foreach (Activity activity in db.Activities.ToList())
             {
-                activityItems.Add(new ActivityItem(activity) { Tag = activity.Id,
+                activityItems.Add(new ActivityItem(activity) { Tag = activity.id,
                                                                TopLevel = false, 
                                                                Visible = true,
                                                                Width = flowLayoutPanel1.ClientSize.Width - 25 });
@@ -129,7 +127,7 @@ namespace DiscordAnimatedActivity
         {
             foreach (ActivityItem item in activityItems)
             {
-                item.Width = flowLayoutPanel1.ClientSize.Width - 8;
+                item.Width = flowLayoutPanel1.ClientSize.Width - 25;
             }
         }
 
@@ -140,7 +138,7 @@ namespace DiscordAnimatedActivity
             db.SaveChanges();
             activityItems.Add(new ActivityItem(item)
             {
-                Tag = item.Id,
+                Tag = item.id,
                 TopLevel = false,
                 Visible = true,
                 Width = flowLayoutPanel1.ClientSize.Width - 25
