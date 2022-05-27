@@ -1,6 +1,6 @@
 ﻿namespace DiscordAnimatedActivity
 {
-    partial class main
+    partial class Main
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolTools = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsTool = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,16 +67,16 @@
             // settingsTool
             // 
             this.settingsTool.Name = "settingsTool";
-            this.settingsTool.Size = new System.Drawing.Size(116, 22);
+            this.settingsTool.Size = new System.Drawing.Size(180, 22);
             this.settingsTool.Text = "Settings";
-            this.settingsTool.Click += new System.EventHandler(this.settingsTool_Click);
+            this.settingsTool.Click += new System.EventHandler(this.SettingsTool_Click);
             // 
             // exitTool
             // 
             this.exitTool.Name = "exitTool";
-            this.exitTool.Size = new System.Drawing.Size(116, 22);
+            this.exitTool.Size = new System.Drawing.Size(180, 22);
             this.exitTool.Text = "Exit";
-            this.exitTool.Click += new System.EventHandler(this.exitTool_Click);
+            this.exitTool.Click += new System.EventHandler(this.ExitTool_Click);
             // 
             // activityToolStripMenuItem
             // 
@@ -91,22 +91,22 @@
             // startTool
             // 
             this.startTool.Name = "startTool";
-            this.startTool.Size = new System.Drawing.Size(105, 22);
+            this.startTool.Size = new System.Drawing.Size(180, 22);
             this.startTool.Text = "Start";
-            this.startTool.Click += new System.EventHandler(this.startTool_Click);
+            this.startTool.Click += new System.EventHandler(this.StartTool_Click);
             // 
             // pauseTool
             // 
             this.pauseTool.Name = "pauseTool";
-            this.pauseTool.Size = new System.Drawing.Size(105, 22);
+            this.pauseTool.Size = new System.Drawing.Size(180, 22);
             this.pauseTool.Text = "Pause";
             // 
             // stopTool
             // 
             this.stopTool.Name = "stopTool";
-            this.stopTool.Size = new System.Drawing.Size(105, 22);
+            this.stopTool.Size = new System.Drawing.Size(180, 22);
             this.stopTool.Text = "Stop";
-            this.stopTool.Click += new System.EventHandler(this.stopTool_Click);
+            this.stopTool.Click += new System.EventHandler(this.StopTool_Click);
             // 
             // addActivity
             // 
@@ -116,7 +116,7 @@
             this.addActivity.TabIndex = 1;
             this.addActivity.Text = "Add new activity";
             this.addActivity.UseVisualStyleBackColor = true;
-            this.addActivity.Click += new System.EventHandler(this.addActivity_Click);
+            this.addActivity.Click += new System.EventHandler(this.AddActivity_Click);
             // 
             // splitter1
             // 
@@ -140,7 +140,7 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 388);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
-            // main
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,9 +151,9 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(450, 200);
-            this.Name = "main";
+            this.Name = "Main";
             this.Text = "Discord animated activity";
-            this.SizeChanged += new System.EventHandler(this.main_SizeChanged);
+            this.SizeChanged += new System.EventHandler(this.Main_SizeChanged);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

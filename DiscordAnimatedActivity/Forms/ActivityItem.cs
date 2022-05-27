@@ -13,9 +13,9 @@ namespace DiscordAnimatedActivity.Forms
 {
     public partial class ActivityItem : Form
     {
-        private string[] timetypes = { "None", "Elapsed", "Left" };
+        private readonly string[] timetypes = { "None", "Elapsed", "Left" };
         private string timetype;
-        private Activity activity;
+        private readonly Activity activity;
         public ActivityItem(Activity activity)
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace DiscordAnimatedActivity.Forms
             toolTime.SetToolTip(time, "Enter time in seconds for to use the current time with an offset \nThe default offset is 0");
         }
 
-        private void timetype_SelectedIndexChanged(object sender, EventArgs e)
+        private void Timetype_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (timetypebox.SelectedIndex)
             {
@@ -44,7 +44,7 @@ namespace DiscordAnimatedActivity.Forms
             }
         }
 
-        private void savebtn_Click(object sender, EventArgs e)
+        private void Savebtn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -88,7 +88,7 @@ namespace DiscordAnimatedActivity.Forms
                 MessageBox.Show("Check your settings!");
             }
         }
-        private void revertbtn_Click(object sender, EventArgs e)
+        private void Revertbtn_Click(object sender, EventArgs e)
         {
             randomlarge.Checked = activity.Israndomlargeimages;
             randomsmall.Checked = activity.Israndomsmallimages;
@@ -153,24 +153,24 @@ namespace DiscordAnimatedActivity.Forms
         }
         public void Revert()
         {
-            revertbtn_Click(toolTime, EventArgs.Empty);
+            Revertbtn_Click(toolTime, EventArgs.Empty);
         }
 
-        private void globalbtns_CheckedChanged(object sender, EventArgs e)
+        private void Globalbtns_CheckedChanged(object sender, EventArgs e)
         {
             SetBtns();
         }
-        private void randoms_CheckedChanged(object sender, EventArgs e)
+        private void Randoms_CheckedChanged(object sender, EventArgs e)
         {
             SetImages();
         }
 
-        private void deletebtn_Click(object sender, EventArgs e)
+        private void Deletebtn_Click(object sender, EventArgs e)
         {
             using (ApplicationContext db = new ApplicationContext())
             {
-                db.activities.Attach(activity);
-                db.activities.Remove(activity);
+                db.Activities.Attach(activity);
+                db.Activities.Remove(activity);
                 db.SaveChanges();
                 this.Close();
             }

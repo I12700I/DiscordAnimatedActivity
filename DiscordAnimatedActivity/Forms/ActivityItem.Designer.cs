@@ -122,7 +122,7 @@
             this.timetypebox.Name = "timetypebox";
             this.timetypebox.Size = new System.Drawing.Size(110, 21);
             this.timetypebox.TabIndex = 2;
-            this.timetypebox.SelectedIndexChanged += new System.EventHandler(this.timetype_SelectedIndexChanged);
+            this.timetypebox.SelectedIndexChanged += new System.EventHandler(this.Timetype_SelectedIndexChanged);
             // 
             // savebtn
             // 
@@ -133,7 +133,7 @@
             this.savebtn.TabIndex = 4;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = true;
-            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
+            this.savebtn.Click += new System.EventHandler(this.Savebtn_Click);
             // 
             // revertbtn
             // 
@@ -144,7 +144,7 @@
             this.revertbtn.TabIndex = 5;
             this.revertbtn.Text = "Revert";
             this.revertbtn.UseVisualStyleBackColor = true;
-            this.revertbtn.Click += new System.EventHandler(this.revertbtn_Click);
+            this.revertbtn.Click += new System.EventHandler(this.Revertbtn_Click);
             // 
             // details
             // 
@@ -204,7 +204,7 @@
             this.randomlarge.TabIndex = 8;
             this.randomlarge.Text = "Random large";
             this.randomlarge.UseVisualStyleBackColor = true;
-            this.randomlarge.CheckedChanged += new System.EventHandler(this.randoms_CheckedChanged);
+            this.randomlarge.CheckedChanged += new System.EventHandler(this.Randoms_CheckedChanged);
             // 
             // randomsmall
             // 
@@ -215,7 +215,7 @@
             this.randomsmall.TabIndex = 8;
             this.randomsmall.Text = "Random small";
             this.randomsmall.UseVisualStyleBackColor = true;
-            this.randomsmall.CheckedChanged += new System.EventHandler(this.randoms_CheckedChanged);
+            this.randomsmall.CheckedChanged += new System.EventHandler(this.Randoms_CheckedChanged);
             // 
             // globalbtns
             // 
@@ -226,7 +226,7 @@
             this.globalbtns.TabIndex = 8;
             this.globalbtns.Text = "Global buttons";
             this.globalbtns.UseVisualStyleBackColor = true;
-            this.globalbtns.CheckedChanged += new System.EventHandler(this.globalbtns_CheckedChanged);
+            this.globalbtns.CheckedChanged += new System.EventHandler(this.Globalbtns_CheckedChanged);
             // 
             // deletebtn
             // 
@@ -237,7 +237,7 @@
             this.deletebtn.TabIndex = 5;
             this.deletebtn.Text = "Delete";
             this.deletebtn.UseVisualStyleBackColor = true;
-            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
+            this.deletebtn.Click += new System.EventHandler(this.Deletebtn_Click);
             // 
             // globaltime
             // 
@@ -248,7 +248,7 @@
             this.globaltime.TabIndex = 8;
             this.globaltime.Text = "Global time";
             this.globaltime.UseVisualStyleBackColor = true;
-            this.globaltime.CheckedChanged += new System.EventHandler(this.globalbtns_CheckedChanged);
+            this.globaltime.CheckedChanged += new System.EventHandler(this.Globalbtns_CheckedChanged);
             // 
             // ActivityItem
             // 
@@ -279,7 +279,7 @@
             this.MinimizeBox = false;
             this.Name = "ActivityItem";
             this.ShowIcon = false;
-            this.Load += new System.EventHandler(this.revertbtn_Click);
+            this.Load += new System.EventHandler(this.Revertbtn_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

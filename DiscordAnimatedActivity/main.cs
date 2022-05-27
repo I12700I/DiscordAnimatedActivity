@@ -13,20 +13,20 @@ using System.Threading;
 
 namespace DiscordAnimatedActivity
 {
-    public partial class main : Form
+    public partial class Main : Form
     {
-        private DiscordClient client = new DiscordClient();  
-        private ApplicationContext db = new ApplicationContext();
-        private List<ActivityItem> activityItems = new List<ActivityItem>();
+        private readonly DiscordClient client = new DiscordClient();  
+        private readonly ApplicationContext db = new ApplicationContext();
+        private readonly List<ActivityItem> activityItems = new List<ActivityItem>();
         private Thread thread;
         private bool showActivity = false;
-        public main()
+        public Main()
         {
             InitializeComponent();
             Settings.Revert("settings.txt");
-            foreach (Activity activity in db.activities.ToList())
+            foreach (Activity activity in db.Activities.ToList())
             {
-                activityItems.Add(new ActivityItem(activity) { Tag = activity.id,
+                activityItems.Add(new ActivityItem(activity) { Tag = activity.Id,
                                                                TopLevel = false, 
                                                                Visible = true,
                                                                Width = flowLayoutPanel1.ClientSize.Width - 25 });
@@ -34,7 +34,7 @@ namespace DiscordAnimatedActivity
             }
         }
 
-        private void settingsTool_Click(object sender, EventArgs e)
+        private void SettingsTool_Click(object sender, EventArgs e)
         {
             SettingsForm settingsForm = new SettingsForm();
             settingsForm.FormClosed += new FormClosedEventHandler(SettingsForm_FormClosed);
@@ -50,12 +50,12 @@ namespace DiscordAnimatedActivity
             }
         }
 
-        private void exitTool_Click(object sender, EventArgs e)
+        private void ExitTool_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void startTool_Click(object sender, EventArgs e)
+        private void StartTool_Click(object sender, EventArgs e)
         {
             try
             {
@@ -83,7 +83,7 @@ namespace DiscordAnimatedActivity
             {
                 firstbtn = false;
                 secondbtn = false;
-                Activity activity = db.activities.ToList()[random.Next(0, db.activities.Count())];
+                Activity activity = db.Activities.ToList()[random.Next(0, db.Activities.Count())];
                 if (activity.Isglobalbtns)
                 {
                     btnfirsturl = Settings.GlobalBtnFirstUrl;
@@ -118,14 +118,14 @@ namespace DiscordAnimatedActivity
                 await Task.Delay((int)Settings.TimeSleep * 1000);
             }
         }
-        private void stopTool_Click(object sender, EventArgs e)
+        private void StopTool_Click(object sender, EventArgs e)
         {
             showActivity = false;
             thread.Join();
             client.Deinitialize();
         }
 
-        private void main_SizeChanged(object sender, EventArgs e)
+        private void Main_SizeChanged(object sender, EventArgs e)
         {
             foreach (ActivityItem item in activityItems)
             {
@@ -133,14 +133,14 @@ namespace DiscordAnimatedActivity
             }
         }
 
-        private void addActivity_Click(object sender, EventArgs e)
+        private void AddActivity_Click(object sender, EventArgs e)
         {
             Activity item = new Activity();
-            db.activities.Add(item);
+            db.Activities.Add(item);
             db.SaveChanges();
             activityItems.Add(new ActivityItem(item)
             {
-                Tag = item.id,
+                Tag = item.Id,
                 TopLevel = false,
                 Visible = true,
                 Width = flowLayoutPanel1.ClientSize.Width - 25

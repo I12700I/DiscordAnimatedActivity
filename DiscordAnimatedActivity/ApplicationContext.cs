@@ -10,7 +10,7 @@ namespace DiscordAnimatedActivity
 {
     public class ApplicationContext: DbContext
     {
-        public DbSet<Activity> activities { get; set; }
+        public DbSet<Activity> Activities { get; set; }
         public ApplicationContext(): base("DefaultConnection") {}
     }
 }

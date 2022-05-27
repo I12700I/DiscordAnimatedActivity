@@ -8,7 +8,13 @@ namespace DiscordAnimatedActivity.Models
 {
     public class Activity
     {
-        public int id { get; set; }
+        private int id;
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
         public string Details { get; set; }
         public string State { get; set; }
         public string Largeimagekey { get; set; }

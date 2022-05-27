@@ -11,8 +11,8 @@ namespace DiscordAnimatedActivity.Models
 	public class DiscordClient
 	{
 		private DiscordRpcClient client;
-		private Button BtnFirst = new Button();
-		private Button BtnSecond = new Button();
+		private readonly Button BtnFirst = new Button();
+		private readonly Button BtnSecond = new Button();
 		public void Initialize()
 		{
 			Settings.Revert("settings.txt");
@@ -131,7 +131,7 @@ namespace DiscordAnimatedActivity.Models
 					Time = new Timestamps() { End = DateTime.UtcNow.AddSeconds(activity.Stoptime) };
 				}
 			}
-			else Time = default(Timestamps);
+			else Time = default;
 			if (FirstButtonEnabled)
 			{
 				Button[] UserButtons;
