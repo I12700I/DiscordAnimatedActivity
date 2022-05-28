@@ -50,9 +50,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 70);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 60);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 380);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(796, 390);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // addActivity
