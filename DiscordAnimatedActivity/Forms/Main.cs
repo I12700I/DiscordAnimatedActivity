@@ -18,16 +18,24 @@ namespace DiscordAnimatedActivity
         private readonly List<ActivityItem> activityItems = new List<ActivityItem>();
         private Thread thread;
         private bool showActivity = false;
+        
         public Main()
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             Settings.Revert("settings.txt");
             foreach (Activity activity in db.Activities.ToList())
             {
-                activityItems.Add(new ActivityItem(activity) { Tag = activity.id,
-                                                               TopLevel = false, 
-                                                               Visible = true,
-                                                               Width = flowLayoutPanel1.ClientSize.Width - 25 });
+                ActivityItem activityItem = new ActivityItem(activity)
+                {
+                    Tag = activity.id,
+                    TopLevel = false,
+                    Visible = true,
+                    Width = flowLayoutPanel1.ClientSize.Width - 25,
+                };
+                activityItems.Add(activityItem);
                 flowLayoutPanel1.Controls.Add(activityItems.Last());
             }
         }

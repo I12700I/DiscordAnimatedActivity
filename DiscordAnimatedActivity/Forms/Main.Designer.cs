@@ -49,6 +49,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 70);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 380);
@@ -151,6 +152,7 @@
             // 
             // Main
             // 
+            this.ActionBarBound = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 450);
@@ -161,6 +163,7 @@
             this.MainMenuStrip = this.materialMenuStrip1;
             this.MinimumSize = new System.Drawing.Size(450, 200);
             this.Name = "Main";
+            this.StatusBarBound = true;
             this.Text = "Discord animated activity";
             this.SizeChanged += new System.EventHandler(this.Main_SizeChanged);
             this.materialMenuStrip1.ResumeLayout(false);

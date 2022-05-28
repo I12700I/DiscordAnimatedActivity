@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscordAnimatedActivity.Models;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace DiscordAnimatedActivity.Forms
 {
-    public partial class ActivityItem : Form
+    public partial class ActivityItem : MaterialForm
     {
         private readonly string[] timetypes = { "None", "Elapsed", "Left" };
         private string timetype;
@@ -19,10 +21,12 @@ namespace DiscordAnimatedActivity.Forms
         public ActivityItem(Activity activity)
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             this.activity = activity;
             toolTime.SetToolTip(time, "Enter time in seconds for to use the current time with an offset \nThe default offset is 0");
         }
-
         private void Timetype_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (timetypebox.SelectedIndex)
