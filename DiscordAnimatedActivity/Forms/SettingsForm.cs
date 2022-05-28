@@ -8,14 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscordAnimatedActivity.Models;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace DiscordAnimatedActivity.Forms
 {
-    public partial class SettingsForm : Form
+    public partial class SettingsForm : MaterialForm
     {
         public SettingsForm()
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
         }
 
         private void GlobalBtnsCheck_CheckedChanged(object sender, EventArgs e)
