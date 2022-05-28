@@ -126,7 +126,7 @@
             this.pauseTool,
             this.stopTool});
             this.playToolStripMenuItem.Name = "playToolStripMenuItem";
-            this.playToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.playToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.playToolStripMenuItem.Text = "Play";
             // 
             // startTool
