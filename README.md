@@ -76,7 +76,28 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- FUTURE FREATURES -->
+## Future Features
+- [ ] Forms
+   - [ ] Settings form
+      - [ ] Change NumericUpDown elements to Material Design elements
+      - [ ] Add a theme selection
+      - [ ] Create lists of large and small images
+   - [ ] ActivityItem form
+      - [ ] Make a drop-down list with available images (from Settings form)
+      - [ ] Change ComboBox element to Material Design element
+      - [ ] Implement the possibility of random image selection
+      - [ ] Add the ability to change the duration of activity individually
+   - [ ] Main form
+      - [ ] Add a filter to search for activities by a given field
+      - [ ] Add functionality for the Pause button
+      - [ ] Change the background color of the scroller
+      - [ ] Remove the white border from the Menu Strip
+   - [ ] Add dialog boxes when clicking on buttons
+- [ ] Settings & Database
+   - [ ] Add more parameters to fine-tune the program for yourself
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- LICENSE -->
 ## License
