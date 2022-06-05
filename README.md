@@ -92,7 +92,7 @@ Don't forget to give the project a star! Thanks again!
       - [ ] Add a filter to search for activities by a given field
       - [ ] Add functionality for the Pause button
       - [ ] Change the background color of the scroller
-      - [ ] Remove the white border from the Menu Strip
+      - [x] Remove the white border from the Menu Strip
    - [ ] Add dialog boxes when clicking on buttons
 - [ ] Settings & Database
    - [ ] Add more parameters to fine-tune the program for yourself
