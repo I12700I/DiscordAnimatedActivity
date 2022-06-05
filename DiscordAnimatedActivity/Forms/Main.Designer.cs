@@ -170,12 +170,7 @@
             this.materialMenuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-            //
-            // Change background color
-            //
-            this.toolsToolStripMenuItem.DropDown.BackColor = System.Drawing.Color.FromArgb(255, 51, 51, 51);
-            this.activityToolStripMenuItem.DropDown.BackColor = System.Drawing.Color.FromArgb(255, 51, 51, 51);
-            this.playToolStripMenuItem.DropDown.BackColor = System.Drawing.Color.FromArgb(255, 51, 51, 51);
+            
         }
 
         #endregion
