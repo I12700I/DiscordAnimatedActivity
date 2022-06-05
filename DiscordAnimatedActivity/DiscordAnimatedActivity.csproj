@@ -140,6 +140,7 @@
     <Folder Include="Design\Fonts\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Design\Images\backgroundimage.png" />
     <Content Include="Design\Images\c09a43a372ba81e3018c3151d4ed4773.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

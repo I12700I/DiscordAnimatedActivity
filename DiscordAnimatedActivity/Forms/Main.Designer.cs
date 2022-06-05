@@ -85,7 +85,7 @@
             this.materialMenuStrip1.Location = new System.Drawing.Point(12, 31);
             this.materialMenuStrip1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialMenuStrip1.Name = "materialMenuStrip1";
-            this.materialMenuStrip1.Size = new System.Drawing.Size(128, 26);
+            this.materialMenuStrip1.Size = new System.Drawing.Size(248, 26);
             this.materialMenuStrip1.TabIndex = 6;
             this.materialMenuStrip1.Text = "materialMenuStrip1";
             // 
@@ -101,14 +101,14 @@
             // settingsTool
             // 
             this.settingsTool.Name = "settingsTool";
-            this.settingsTool.Size = new System.Drawing.Size(127, 22);
+            this.settingsTool.Size = new System.Drawing.Size(180, 22);
             this.settingsTool.Text = "Settings";
             this.settingsTool.Click += new System.EventHandler(this.SettingsTool_Click);
             // 
             // exitTool
             // 
             this.exitTool.Name = "exitTool";
-            this.exitTool.Size = new System.Drawing.Size(127, 22);
+            this.exitTool.Size = new System.Drawing.Size(180, 22);
             this.exitTool.Text = "Exit";
             this.exitTool.Click += new System.EventHandler(this.ExitTool_Click);
             // 
@@ -127,7 +127,7 @@
             this.pauseTool,
             this.stopTool});
             this.playToolStripMenuItem.Name = "playToolStripMenuItem";
-            this.playToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.playToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.playToolStripMenuItem.Text = "Play";
             // 
             // startTool
