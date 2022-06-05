@@ -81,7 +81,6 @@ Don't forget to give the project a star! Thanks again!
 - [ ] Forms
    - [ ] Settings form
       - [ ] Change NumericUpDown elements to Material Design elements
-      - [ ] Add a theme selection
       - [ ] Create lists of large and small images
    - [ ] ActivityItem form
       - [ ] Make a drop-down list with available images (from Settings form)
