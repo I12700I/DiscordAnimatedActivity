@@ -38,9 +38,7 @@ namespace DiscordAnimatedActivity
                 activityItems.Add(activityItem);
                 flowLayoutPanel1.Controls.Add(activityItems.Last());
             }
-            toolsToolStripMenuItem.DropDown.BackColor = System.Drawing.Color.FromArgb(255, 51, 51, 51);
-            activityToolStripMenuItem.DropDown.BackColor = System.Drawing.Color.FromArgb(255, 51, 51, 51);
-            playToolStripMenuItem.DropDown.BackColor = System.Drawing.Color.FromArgb(255, 51, 51, 51);
+            
         }
 
         private void SettingsTool_Click(object sender, EventArgs e)
