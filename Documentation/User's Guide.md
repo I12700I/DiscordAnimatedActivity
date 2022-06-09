@@ -55,7 +55,7 @@ The fields **Large/Small Images Count**, **Auto start** and **Auto random images
 
 1. Click on the **ADD NEW ACTIVITY** button.
 2. Fields for customizing *game activity* will appear below.\
-![9](9.png])
+![9](9.png)
 The image below shows how the fields in the application and the display in Discord relate.\
 ![10](10.png)
 
