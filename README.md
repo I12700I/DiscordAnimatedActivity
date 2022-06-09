@@ -58,7 +58,7 @@ To get a local copy up and running follow these simple example steps.
 4. Create your own game activities.
 5. Start displaying game activities in **Activity** -> **Start**.
 
-In case of any difficulties, you can refer to the [User's Guide](Documentation/User's Guide.md)
+In case of any difficulties, you can refer to the [User's Guide](https://github.com/gdeMojChay/DiscordAnimatedActivity/blob/master/Documentation/User's%20Guide.md)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
