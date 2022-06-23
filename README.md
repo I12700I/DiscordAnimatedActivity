@@ -10,7 +10,7 @@
 ## About The Project
 
 <!-- ![product-screenshot](media/product-screenshot.png) -->
-Now this repository is archived. Look for new versions at [link](https://github.com/gdeMojChay/DiscordAnimatedActivity)
+Now this repository is archived. Look for new versions at [link](https://github.com/gdeMojChay/DiscordAnimatedActivity).\
 Discord Animated Activity - is an application for convenient creation of instances of game activity in Discord
 
 Why?:
