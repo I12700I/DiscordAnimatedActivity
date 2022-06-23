@@ -10,7 +10,7 @@
 ## About The Project
 
 <!-- ![product-screenshot](media/product-screenshot.png) -->
-
+Now this repository is archived. Look for new versions at [link](https://github.com/gdeMojChay/DiscordAnimatedActivity)
 Discord Animated Activity - is an application for convenient creation of instances of game activity in Discord
 
 Why?:
@@ -114,7 +114,7 @@ Distributed under the GNU GPLv3 License. See `LICENSE.txt` for more information.
 
 Alex - thetypgame@gmail.com
 
-Project Link: [https://github.com/gdeMojChay/PyAutoAli](https://github.com/gdeMojChay/PyAutoAli)
+Project Link: [https://github.com/gdeMojChay/DiscordAnimatedActivity-acrhived](https://github.com/gdeMojChay/DiscordAnimatedActivity-acrhived)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
