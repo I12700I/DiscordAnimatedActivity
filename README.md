@@ -41,14 +41,14 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo.
    ```sh
-   git clone https://github.com/gdeMojChay/DiscordAnimatedActivity.git
+   git clone https://github.com/I12700I/DiscordAnimatedActivity.git
    ```
 2. Open the solution in Visual Studio or in another text editor.
 3. Check the correct settings and database.
 
 ### Releases
 
-1. Go to [Releases](https://github.com/gdeMojChay/DiscordAnimatedActivity/releases)
+1. Go to [Releases](https://github.com/I12700I/DiscordAnimatedActivity/releases)
    and download precompiled exe file.
 
 2. Run exe file.
@@ -112,21 +112,21 @@ Distributed under the GNU GPLv3 License. See `LICENSE.txt` for more information.
 
 Alex - thetypgame@gmail.com
 
-Project Link: [https://github.com/gdeMojChay/DiscordAnimatedActivity-acrhived](https://github.com/gdeMojChay/DiscordAnimatedActivity-acrhived)
+Project Link: [https://github.com/I12700I/DiscordAnimatedActivity-acrhived](https://github.com/gdeMojChay/DiscordAnimatedActivity-acrhived)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-[contributors-shield]: https://img.shields.io/github/contributors/gdeMojChay/DiscordAnimatedActivity.svg?style=for-the-badge
-[contributors-url]: https://github.com/gdeMojChay/DiscordAnimatedActivity/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/gdeMojChay/DiscordAnimatedActivity.svg?style=for-the-badge
-[forks-url]: https://github.com/gdeMojChay/DiscordAnimatedActivity/network/members
-[stars-shield]: https://img.shields.io/github/stars/gdeMojChay/DiscordAnimatedActivity.svg?style=for-the-badge
-[stars-url]: https://github.com/gdeMojChay/DiscordAnimatedActivity/stargazers
-[issues-shield]: https://img.shields.io/github/issues/gdeMojChay/DiscordAnimatedActivity.svg?style=for-the-badge
-[issues-url]: https://github.com/gdeMojChay/DiscordAnimatedActivity/issues
-[license-shield]: https://img.shields.io/github/license/gdeMojChay/DiscordAnimatedActivity.svg?style=for-the-badge
-[license-url]: https://github.com/gdeMojChay/DiscordAnimatedActivity/blob/master/LICENSE.txt
-[download-shield]: https://img.shields.io/github/v/release/gdeMojChay/DiscordAnimatedActivity.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/I12700I/DiscordAnimatedActivity.svg?style=for-the-badge
+[contributors-url]: https://github.com/I12700I/DiscordAnimatedActivity/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/I12700I/DiscordAnimatedActivity.svg?style=for-the-badge
+[forks-url]: https://github.com/I12700I/DiscordAnimatedActivity/network/members
+[stars-shield]: https://img.shields.io/github/stars/I12700I/DiscordAnimatedActivity.svg?style=for-the-badge
+[stars-url]: https://github.com/I12700I/DiscordAnimatedActivity/stargazers
+[issues-shield]: https://img.shields.io/github/issues/I12700I/DiscordAnimatedActivity.svg?style=for-the-badge
+[issues-url]: https://github.com/I12700I/DiscordAnimatedActivity/issues
+[license-shield]: https://img.shields.io/github/license/I12700I/DiscordAnimatedActivity.svg?style=for-the-badge
+[license-url]: https://github.com/I12700I/DiscordAnimatedActivity/blob/master/LICENSE.txt
+[download-shield]: https://img.shields.io/github/v/release/I12700I/DiscordAnimatedActivity.svg?style=for-the-badge
 [download-url]: ../../releases
-[latest-shield]: https://img.shields.io/github/downloads/gdeMojChay/DiscordAnimatedActivity/total.svg?style=for-the-badge
+[latest-shield]: https://img.shields.io/github/downloads/I12700I/DiscordAnimatedActivity/total.svg?style=for-the-badge
 [latest-url]: ../../releases
